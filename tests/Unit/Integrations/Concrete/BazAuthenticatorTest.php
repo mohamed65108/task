@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Integrations\Concrete;
 
-use App\Integrations\Concrete\BazAuthenticator;
+use App\Integrations\Authenticators\BazAuthenticator;
 use PHPUnit\Framework\TestCase;
 
 class BazAuthenticatorTest extends TestCase

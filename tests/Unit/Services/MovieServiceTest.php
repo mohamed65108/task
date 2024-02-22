@@ -2,9 +2,9 @@
 
 namespace Tests\Unit\Services;
 
-use App\Integrations\Adapter\MovieServiceBar;
-use App\Integrations\Adapter\MovieServiceBaz;
-use App\Integrations\Adapter\MovieServiceFoo;
+use App\Integrations\Adapters\MovieServiceBar;
+use App\Integrations\Adapters\MovieServiceBaz;
+use App\Integrations\Adapters\MovieServiceFoo;
 use App\Services\MovieService;
 use Illuminate\Support\Facades\Cache;
 use Tests\TestCase;

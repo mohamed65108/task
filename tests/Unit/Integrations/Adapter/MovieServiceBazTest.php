@@ -3,7 +3,7 @@
 namespace Tests\Unit\Integrations\Adapter;
 
 use App\Exceptions\MovieServiceUnavailableException;
-use App\Integrations\Adapter\MovieServiceBaz;
+use App\Integrations\Adapters\MovieServiceBaz;
 use External\Baz\Exceptions\ServiceUnavailableException;
 use External\Baz\Movies\MovieService;
 use PHPUnit\Framework\TestCase;

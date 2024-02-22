@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Integrations\Concrete;
 
-use App\Integrations\Concrete\BarAuthenticator;
+use App\Integrations\Authenticators\BarAuthenticator;
 use PHPUnit\Framework\TestCase;
 
 class BarAuthenticatorTest extends TestCase

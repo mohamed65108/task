@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Integrations\Concrete;
 
-use App\Integrations\Concrete\FooAuthenticator;
+use App\Integrations\Authenticators\FooAuthenticator;
 use PHPUnit\Framework\TestCase;
 
 class FooAuthenticatorTest extends TestCase
