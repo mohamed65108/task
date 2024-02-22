@@ -22,7 +22,7 @@ class MovieController extends Controller
 
             return response()->json($titles);
         } catch (Exception) {
-            return response()->json(['status' => 'failure'], 500);
+            return response()->json(['status' => 'failure'], 503);
         }
     }
 }

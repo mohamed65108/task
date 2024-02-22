@@ -41,7 +41,7 @@ class MovieControllerTest extends TestCase
         $response = $this->get('/api/titles');
 
         // Assert the response status code is 500 (Internal Server Error)
-        $response->assertStatus(500);
+        $response->assertStatus(503);
 
         // Assert the response JSON contains the failure status
         $response->assertJson(['status' => 'failure']);
