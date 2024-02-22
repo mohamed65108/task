@@ -1,31 +1,34 @@
 <?php
 
-namespace Tests\Unit\Integrations\Adapter;
+namespace Tests\Unit\Integrations\Adapters;
 
 use App\Exceptions\MovieServiceUnavailableException;
-use App\Integrations\Adapters\MovieServiceBaz;
-use External\Baz\Exceptions\ServiceUnavailableException;
-use External\Baz\Movies\MovieService;
+use App\Integrations\Adapters\MovieServiceBar;
+use External\Bar\Exceptions\ServiceUnavailableException;
+use External\Bar\Movies\MovieService;
 use PHPUnit\Framework\TestCase;
 
-class MovieServiceBazTest extends TestCase
+class MovieServiceBarTest extends TestCase
 {
     public function testGetTitlesSuccess()
     {
         // Mock MovieService
         $movieServiceMock = $this->createMock(MovieService::class);
         $movieServiceMock->method('getTitles')->willReturn([
-            'titles' => ['Title 1', 'Title 2', 'Title 3']
+            'titles' => [
+                ['title' => 'Title 1', 'summary' => 'Summary 1'],
+                ['title' => 'Title 2', 'summary' => 'Summary 2'],
+            ]
         ]);
 
-        // Create MovieServiceBaz instance with mocked MovieService
-        $adapter = new MovieServiceBaz($movieServiceMock);
+        // Create MovieServiceBar instance with mocked MovieService
+        $adapter = new MovieServiceBar($movieServiceMock);
 
         // Test the getTitles method
         $titles = $adapter->getTitles();
 
         // Assert that the method returns the expected titles
-        $this->assertEquals(['Title 1', 'Title 2', 'Title 3'], $titles);
+        $this->assertEquals(['Title 1', 'Title 2'], $titles);
     }
 
     public function testGetTitlesThrowsException()
@@ -34,8 +37,8 @@ class MovieServiceBazTest extends TestCase
         $movieServiceMock = $this->createMock(MovieService::class);
         $movieServiceMock->method('getTitles')->willThrowException(new ServiceUnavailableException());
 
-        // Create MovieServiceBaz instance with mocked MovieService
-        $adapter = new MovieServiceBaz($movieServiceMock);
+        // Create MovieServiceBar instance with mocked MovieService
+        $adapter = new MovieServiceBar($movieServiceMock);
 
         // Test that the getTitles method throws the expected exception
         $this->expectException(MovieServiceUnavailableException::class);

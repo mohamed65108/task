@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Integrations\Adapter;
+namespace Tests\Unit\Integrations\Adapters;
 
 use App\Exceptions\MovieServiceUnavailableException;
 use App\Integrations\Adapters\MovieServiceFoo;

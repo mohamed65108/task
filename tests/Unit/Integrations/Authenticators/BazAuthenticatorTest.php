@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\Integrations\Concrete;
+namespace Tests\Unit\Integrations\Authenticators;
 
 use App\Integrations\Authenticators\BazAuthenticator;
 use PHPUnit\Framework\TestCase;
