@@ -2,15 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\MovieService;
+use Exception;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
-    public function getTitles(Request $request): JsonResponse
-    {
-        // TODO
+    private MovieService $movieService;
 
-        return response()->json([]);
+    public function __construct(MovieService $movieService)
+    {
+        $this->movieService = $movieService;
+    }
+
+    public function getTitles(): JsonResponse
+    {
+        try {
+            $titles = $this->movieService->getTitles();
+
+            return response()->json($titles);
+        } catch (Exception) {
+            return response()->json(['status' => 'failure'], 503);
+        }
     }
 }
