@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Unit\Integrations\Authenticators;
+namespace Tests\Unit\Integrations\Foo\Auth;
 
-use App\Integrations\Authenticators\FooAuthenticator;
+use App\Integrations\Foo\Auth\FooAuthenticator;
 use PHPUnit\Framework\TestCase;
 
 class FooAuthenticatorTest extends TestCase

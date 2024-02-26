@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Integrations\Authenticators;
+namespace App\Integrations\Baz\Auth;
 
 use App\Integrations\Contracts\AuthenticatorInterface;
 use External\Baz\Auth\Authenticator;

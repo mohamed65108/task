@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Integrations\Authenticators;
+namespace App\Integrations\Foo\Auth;
 
 use App\Integrations\Contracts\AuthenticatorInterface;
 use External\Foo\Auth\AuthWS;

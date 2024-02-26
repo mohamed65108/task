@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Integrations\Authenticators;
+namespace App\Integrations\Bar\Auth;
 
 use App\Integrations\Contracts\AuthenticatorInterface;
 use External\Bar\Auth\LoginService;

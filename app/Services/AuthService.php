@@ -2,10 +2,10 @@
 
 namespace App\Services;
 
-use App\Integrations\Authenticators\BarAuthenticator;
-use App\Integrations\Authenticators\BazAuthenticator;
-use App\Integrations\Authenticators\FooAuthenticator;
 use App\Integrations\Contracts\AuthenticatorInterface;
+use App\Integrations\Bar\Auth\BarAuthenticator;
+use App\Integrations\Baz\Auth\BazAuthenticator;
+use App\Integrations\Foo\Auth\FooAuthenticator;
 
 class AuthService
 {

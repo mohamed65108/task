@@ -2,9 +2,9 @@
 
 namespace App\Services;
 
-use App\Integrations\Adapters\MovieServiceBar;
-use App\Integrations\Adapters\MovieServiceBaz;
-use App\Integrations\Adapters\MovieServiceFoo;
+use App\Integrations\Bar\Adapters\Movie\MovieServiceBar;
+use App\Integrations\Baz\Adapters\Movie\MovieServiceBaz;
+use App\Integrations\Foo\Adapters\Movie\MovieServiceFoo;
 
 class MovieService
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Unit\Integrations\Authenticators;
+namespace Tests\Unit\Integrations\Bar\Auth;
 
-use App\Integrations\Authenticators\BarAuthenticator;
+use App\Integrations\Bar\Auth\BarAuthenticator;
 use PHPUnit\Framework\TestCase;
 
 class BarAuthenticatorTest extends TestCase

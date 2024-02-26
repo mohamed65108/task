@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Integrations\Adapters;
+namespace App\Integrations\Bar\Adapters\Movie;
 
 use App\Exceptions\MovieServiceUnavailableException;
 use App\Integrations\Contracts\MovieServiceAdapterInterface;
 use App\Traits\Retryable;
 use Exception;
-use External\Foo\Movies\MovieService;
+use External\Bar\Movies\MovieService;
 
-class MovieServiceFoo implements MovieServiceAdapterInterface
+class MovieServiceBar implements MovieServiceAdapterInterface
 {
     use Retryable;
 
@@ -26,7 +26,9 @@ class MovieServiceFoo implements MovieServiceAdapterInterface
     {
         try {
             return $this->retry(function () {
-                return $this->movieService->getTitles();
+                $titles = $this->movieService->getTitles()['titles'];
+
+                return array_column($titles, 'title');
             });
         } catch (Exception) {
             throw new MovieServiceUnavailableException();

@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Unit\Integrations\Authenticators;
+namespace Tests\Unit\Integrations\Baz\Auth;
 
-use App\Integrations\Authenticators\BazAuthenticator;
+use App\Integrations\Baz\Auth\BazAuthenticator;
 use PHPUnit\Framework\TestCase;
 
 class BazAuthenticatorTest extends TestCase

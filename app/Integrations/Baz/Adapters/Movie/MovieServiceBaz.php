@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Integrations\Adapters;
+namespace App\Integrations\Baz\Adapters\Movie;
 
 use App\Exceptions\MovieServiceUnavailableException;
 use App\Integrations\Contracts\MovieServiceAdapterInterface;
